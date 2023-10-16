@@ -7,8 +7,14 @@ int main (void)
 {
 	for (int c = 0; c <= 255; c++)
 	{
-        //printf("my for %d is %d and should be %d\n", c, ft_isprint(c), isprint(c));
-		assert(ft_isprint(c) == isprint(c));
+        int res_origin_function;
+
+		res_origin_function = isprint(c);
+		if(res_origin_function > 0)
+		{
+			res_origin_function = 1;
+		}
+		assert(ft_isprint(c) == res_origin_function);
 	}
 	printf("Test succed\n");
 	return (0);

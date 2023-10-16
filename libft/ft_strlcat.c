@@ -6,64 +6,40 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:01:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/06 18:10:06 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/16 14:06:49 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	int	n;
-	int dst_len;
+	size_t	n;
+	size_t len;
 
 	i = 0;
 	n = 0;
-	dst_len = ft_strlen(dst);
-	if (dst_len > (int)size)
+	len = ft_strlen(dst) + ft_strlen(src);
+
+	if (size == 0 && ft_strlen(dst) > 0)
 	{
-		return (dst_len);
+		return (0);
+	}
+	if ((size_t)ft_strlen(dst) > size)
+	{
+		return (ft_strlen(dst) + size + 1);
 	}
 	while (dst[i] != '\0' && i < size)
 	{
-		i++;
+		dst++;
 	}
-	while (src[n] != '\0' && i < size -1)
+	while (n < (size_t)ft_strlen(src) && n < size -1)
 	{
 		dst[i] = src[n];
 		i++;
 		n++;
 	}
 	dst[i] = '\0';
-	return (i);
+	return (len);
 }
-
-// size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size)
-// {
-// 	int dst_len;
-// 	int src_len;
-// 	int	n;
-
-// 	dst_len = ft_strlen(dst);
-// 	src_len = ft_strlen(src);
-
-// 	if (size < dst_len)
-// 	{
-// 		return ()
-// 	}
-// 	i = 0;
-// 	n = 0;
-// 	while (dst[i] != '\0' && i < dstsize)
-// 	{
-// 		i++;
-// 	}
-// 	while (src[n] != '\0' && i < dstsize -1)
-// 	{
-// 		dst[i] = src[n];
-// 		i++;
-// 		n++;
-// 	}
-// 	dst[i] = '\0';
-// 	return (i);
-// }

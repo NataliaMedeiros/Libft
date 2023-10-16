@@ -9,9 +9,10 @@ for file in ${INCL_FILES} ; do
         gcc  -Wall -Werror -Wextra \
         libft/${FILE_NAME} \
         main_for_test/main_${FILE_NAME} \
-        main_for_test/assert.c \
-        main_for_test/string_gen.c \
-        -L./libft -lft \
+        assert.c \
+        string_gen.c \
+        -L. -Llibft -lft \
+        -lbsd \
         -o exec/${FILE_NAME%%.*} 
 
         if [ $? -eq 0 ]; then

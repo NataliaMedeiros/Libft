@@ -1,4 +1,4 @@
-#include <string.h>
+#include <bsd/string.h>
 #include "../libft/libft.h"
 
 void assert (int condition);
@@ -19,5 +19,6 @@ int main (void)
     c = "My name is Natalia";
     assert((unsigned int)ft_strlen(c) == strlen(c));
     printf("Success The length of the string '%s' is = %d\n", c, ft_strlen(c));
+    printf("Test succes\n");
     return (0);
 }

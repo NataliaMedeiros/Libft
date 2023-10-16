@@ -7,7 +7,14 @@ int main (void)
 {
 	for (int c = 0; c <= 255; c++)
 	{
-		assert(ft_isdigit(c) == isdigit(c));
+        int res_origin_function;
+
+		res_origin_function = isdigit(c);
+		if(res_origin_function > 0)
+		{
+			res_origin_function = 1;
+		}
+		assert(ft_isdigit(c) == res_origin_function);
 	}
 	printf("Test succed\n");
 	return (0);

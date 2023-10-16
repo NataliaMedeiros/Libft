@@ -6,9 +6,15 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:01:32 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/06 18:11:58 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/11 16:46:11 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+library -> #include <string.h>
+size_t strlen(const char *s);
+description: calculate the length of a string, excluding the terminating null byte ('\0')
+*/
 
 #include <stdio.h>
 #include "libft.h"

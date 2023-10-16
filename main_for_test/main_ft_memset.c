@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h> 
-#include <string.h>
+#include <bsd/string.h>
 #include "../libft/libft.h"
 
-// #define ASSERT(condition) \
-//     if(!(condition)) \
-//     { \
-//         printf("ATENTION: Test failed at file %s and line %d\n", __FILE__, __LINE__); \
-//         return (1); \
-//     } 
+// #define ASSERT(condition) if(!(condition)) { printf("ATENTION: Test failed at file %s and line %d\n", __FILE__, __LINE__); \return (1);} 
 
 void assert (int condition);
 
@@ -35,5 +30,6 @@ int	main(void)
     printf("%s\n", numbers1);
     memset(numbers2 + 1, '0', 3);
     assert(memcmp(numbers1, numbers2, sizeof(numbers1)) == 0);
-	return (0);
+	printf("Test succed\n");
+    return (0);
 }

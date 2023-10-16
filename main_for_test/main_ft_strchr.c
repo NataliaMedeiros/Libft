@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 #include "../libft/libft.h"
 
 void assert (int condition);
@@ -23,5 +23,6 @@ int	main(void)
 
     assert(ft_strchr(s, ch) == strchr(s, ch));
 	printf("Succes '%s' is iqual = '%s'\n", ft_strchr(s, ch), strchr(s, ch));
-	return (0);
+	printf("Test succed\n");
+    return (0);
 }

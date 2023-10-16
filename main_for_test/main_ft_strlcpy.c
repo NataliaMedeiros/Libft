@@ -1,20 +1,22 @@
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 #include "../libft/libft.h"
 
 void assert (int condition);
 
 int	main(void)
 {
-	char	* restrict dst = "avocado";
-	char	* restrict src = "is good";
-    char	* restrict dst1 = "avocado";
-	char	* restrict src1 = "is good";
+	char	dst[] = "avocado";
+	char	src[] = "is good";
+    char	dst1[] = "avocado";
+	char	src1[] = "is good";
     size_t     len;
 
     len = 5;
 	ft_strlcpy(dst, src, len);
     assert(ft_strlcpy(dst, src, len) == strlcpy(dst1, src1, len));
-	printf("%s", dst);
+	printf("%s\n", dst);
+	printf("%zu\n", ft_strlcpy(dst, src, len));
+	printf("%zu\n", strlcpy(dst1, src1, len));
 	return (0);
 }

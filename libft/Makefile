@@ -9,6 +9,10 @@ Files = ft_isalpha \
 		ft_strrchr \
 		ft_strlen \
 		ft_memset \
+		ft_bzero \
+		ft_atoi \
+		ft_isalnum \
+		ft_strdup \
 
 OUTN = $(Library).a
 CFILES = $(Files:%=%.c)
