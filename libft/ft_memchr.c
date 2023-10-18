@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 18:03:13 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/11 18:20:39 by nmedeiro         ###   ########.fr       */
+/*   Created: 2023/10/11 18:03:09 by nmedeiro          #+#    #+#             */
+/*   Updated: 2023/10/18 11:28:20 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*int memcmp(const void *s1, const void *s2, size_t n);*/
+/* void *memchr(const void *s, int c, size_t n);*/
+
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-    
+	size_t i;
+	unsigned char *new_s;
+	
+	i = 0;
+	new_s = (unsigned char *)s;
+	while (i < n)
+	{
+		if (new_s[i] == (unsigned char)c)
+		{
+			return (new_s+i);
+		}
+		i++;
+	}
+	return (NULL);
 }

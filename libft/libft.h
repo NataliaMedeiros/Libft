@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:51:10 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/16 15:22:30 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/18 11:19:33 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ int ft_atoi(const char *nptr);
 
 void *ft_calloc(size_t nmemb, size_t size);
 
-char *ft_sstrdup(const char *s);
+char *ft_strdup(const char *s);
 
 #endif
