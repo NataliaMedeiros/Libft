@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:03:13 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/18 12:23:25 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/18 14:37:56 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 
     i = 0;
     new_s1 = (unsigned char *)s1;
-    new_s2 = (unsigned char *)s2
+    new_s2 = (unsigned char *)s2;
     while (i < (int)n)
        {
             if(new_s1[i] == new_s2[i])

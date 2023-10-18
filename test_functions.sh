@@ -6,7 +6,7 @@ for file in ${INCL_FILES} ; do
 
     if [ -f "main_for_test/main_${FILE_NAME}" ]; then
 
-        gcc  -Wall -Werror -Wextra \
+        cc  -Wall -Werror -Wextra \
         libft/${FILE_NAME} \
         main_for_test/main_${FILE_NAME} \
         assert.c \

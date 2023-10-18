@@ -16,6 +16,10 @@ Files = ft_isalpha \
 		ft_tolower \
 		ft_toupper \
 		ft_memchr \
+		ft_memcmp \
+		ft_strncmp \
+		ft_strnstr \
+		ft_memcpy \
 
 OUTN = $(Library).a
 CFILES = $(Files:%=%.c)

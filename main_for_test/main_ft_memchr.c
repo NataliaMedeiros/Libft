@@ -14,7 +14,7 @@ int main(void)
     int n0 = 6;
 
     assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    //printf("test 0 = %p\n", ft_memchr(s0, c0, n0));
+    printf("test 0 = %p\n", ft_memchr(s0, c0, n0));
 //test 1 - should find correspondence
     n0 = 4;
     assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
