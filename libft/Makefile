@@ -20,6 +20,8 @@ Files = ft_isalpha \
 		ft_strncmp \
 		ft_strnstr \
 		ft_memcpy \
+		ft_memmove \
+		ft_calloc \
 
 OUTN = $(Library).a
 CFILES = $(Files:%=%.c)
