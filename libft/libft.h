@@ -25,7 +25,7 @@ int ft_isascii(int c);
 
 int	ft_isprint(char c);
 
-int ft_strlen(const char *c);
+size_t ft_strlen(const char *c);
 
 void *ft_memset(void *b, int c, size_t len);
 

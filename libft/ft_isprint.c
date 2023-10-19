@@ -10,12 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-library -> #include <ctype.h>
-int isprint(int c);
-description: checks for any printable character including space.
-*/
-
 #include "libft.h"
 
 int	ft_isprint(char c)

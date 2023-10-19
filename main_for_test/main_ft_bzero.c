@@ -1,11 +1,12 @@
 #include <stdio.h>
-#include <bsd/string.h>
+#include <string.h>
 #include "../libft/libft.h"
 
 void assert (int condition);
 
 int main(void)
 {
+//test 0
     char t[10];
     char ot[10];
     int n = 10;
@@ -16,7 +17,7 @@ int main(void)
         //printf("position %d -> %c = %c\n", i, t[i], ot[i]);
         assert(t[i] == ot[i]);
     }
-    
+//test 1
     char t1[] = "I love coffee";
     char ot1[] = "I love coffee";
     int n1 = sizeof(t1);
@@ -27,7 +28,7 @@ int main(void)
         //printf("position %d -> %c = %c\n", i, t1[i], ot1[i]);
         assert(t1[i] == ot1[i]);
     }
-
+//test 2
     char t2[] = "";
     char ot2[] = "";
     int n2 = sizeof(t2);
@@ -38,7 +39,7 @@ int main(void)
         //printf("position %d -> %c = %c\n", i, t2[i], ot2[i]);
         assert(t2[i] == ot2[i]);
     }
-
+//test 3
     int t3[] = {1, 2, 3, 4, 5};
     int ot3[] = {1, 2, 3, 4, 5};
     int n3 = sizeof(t3);
@@ -49,7 +50,7 @@ int main(void)
         //printf("position %d -> %d = %d\n", i, t3[i], ot3[i]);
         assert(t3[i] == ot3[i]);
     }
-    
+//test 4   
     int t4[5];
     int ot4[5];
     int n4 = sizeof(t4);
@@ -60,7 +61,7 @@ int main(void)
         //printf("position %d -> %d = %d\n", i, t4[i], ot4[i]);
         assert(t4[i] == ot4[i]);
     }
-    
+//test 5
     int t5[10000];
     int ot5[10000];
     int n5 = sizeof(t5);
@@ -70,7 +71,7 @@ int main(void)
     {
         assert(t5[i] == ot5[i]);
     }
-
+//test final
     printf("Test succed\n");
     return (0);
 }

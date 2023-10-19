@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <bsd/string.h>
+#include <string.h>
 #include <stdlib.h>
 
 #include "../libft/libft.h"

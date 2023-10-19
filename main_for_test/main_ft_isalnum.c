@@ -15,6 +15,8 @@ int main (void)
 			res_origin_function = 1;
 		}
 		assert(ft_isalnum(c) == res_origin_function);
+		// printf("for %c isalnum returns %d and %d\n", (char)c, ft_isalnum(c), res_origin_function);
+
 	}
 	printf("Test succed\n");
 	return (0);

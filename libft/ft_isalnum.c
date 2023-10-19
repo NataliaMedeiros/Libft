@@ -11,13 +11,8 @@
 /* ************************************************************************** */
 
 /*
-	library
-		#include <ctype.h>
-	Prototype
-		int isdigit(int c);;
-	description: 
-		checks for an alphanumeric character;.
-This function could be write on this way return (ft_isalpha(c) || ft_isdigit(c));
+	This function also could be write on this way:
+		return (ft_isalpha(c) || ft_isdigit(c));
 */
 #include "libft.h"
 

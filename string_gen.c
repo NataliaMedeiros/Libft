@@ -3,7 +3,7 @@
 #include <string.h>
 #include "libft/libft.h"
 
-int	ft_strlen(const char *c);
+size_t	ft_strlen(const char *c);
 
 char char_gen(const char *char_set, int length_set) 
 {

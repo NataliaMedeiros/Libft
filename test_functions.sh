@@ -12,7 +12,6 @@ for file in ${INCL_FILES} ; do
         assert.c \
         string_gen.c \
         -L. -Llibft -lft \
-        -lbsd \
         -o exec/${FILE_NAME%%.*} 
 
         if [ $? -eq 0 ]; then

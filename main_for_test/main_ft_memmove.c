@@ -1,19 +1,14 @@
-#include <bsd/string.h>
+#include <string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 
 /*
-    Overlapping Source and Destination Ranges:
-        Test cases where the source and destination memory regions significantly overlap.
-        Test cases where the destination range is entirely within the source range.
-        Test cases where the source and destination ranges are exactly the same.
-
     Null Pointers:
         Test the behavior when either the source or destination pointer is a null pointer.
 
     Empty or Zero-Length Copy:
-        Test cases where the length (n) of the copy is zero.
-        Test cases where either the source or destination is an empty buffer.
+        Test cases where either the source or destination is an empty 
+		buffer.
 
     Data Type Variations:
         Test different data types (e.g., characters, integers, structures) for source and destination.
@@ -42,21 +37,32 @@ void assert(int condition);
 
 int main(void)
 {
-	char	dst[4];
-	char	src[] = "is good";
-    size_t     len;
-	char	dst1[4];
-	char	src1[] = "is good";
-    size_t     len1;
+//test 0 - Destination range is entirely within the source range.
+	char	my_dest0[7];
+	char	src0[] = "is good";
+    size_t     len0;
+	char	dst0[7];
 
-    len = strlen(src);
-    len1 = strlen(src1);
-    ft_memmove(dst, src, len);
-    memmove(dst1, src1, len1);
-    printf("%s\n", dst);
-    printf("%s\n", src);
-    printf("%s\n", dst1);
-    printf("%s\n", src1);
+    len0 = 7;
+    ft_memmove(my_dest0, src0, len0);
+	dst[len0] = '\0';
+    memmove(dst0, src0, len0);
+	dst1[len] = '\0';
+    //printf("%s\n", dst);
+    //printf("%s\n", dst1);
+	assert(memcmp(dst, dst1, len) == 0);
+//test 1 - len = 0
+	char	my_d[7];
+	char	source[] = "is good";
+    size_t     len1;
+	char	d[7];
+
+    len1 = 0;
+    ft_memmove(my_d, source, len1);
+    memmove(d, source, len1);
+    //printf("%s\n", my_d);
+    //printf("%s\n", d);
+	assert(memcmp(dst, dst1, len) == 0);
     printf("Test succed\n");
 	return (0);
 }

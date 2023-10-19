@@ -1,4 +1,4 @@
-#include <bsd/string.h>
+#include <string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 

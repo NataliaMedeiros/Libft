@@ -15,6 +15,7 @@ int main (void)
 			res_origin_function = 1;
 		}
 		assert(ft_isprint(c) == res_origin_function);
+		//printf("%d = %d\n", ft_isprint(c), res_origin_function);
 	}
 	printf("Test succed\n");
 	return (0);

@@ -10,21 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-library -> #include <string.h>
-size_t strlen(const char *s);
-description: calculate the length of a string, excluding the terminating null byte ('\0')
-*/
-
-#include <stdio.h>
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+size_t	ft_strlen(const char *s)
 {
 	int	len;
 
 	len = 0;
-	while (c[len] != '\0')
+	while (s[len] != '\0')
 	{
 		len++;
 	}
