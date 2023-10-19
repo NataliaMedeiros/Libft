@@ -2,35 +2,6 @@
 #include <stdio.h>
 #include "../libft/libft.h"
 
-/*
-    Null Pointers:
-        Test the behavior when either the source or destination pointer is a null pointer.
-
-    Empty or Zero-Length Copy:
-        Test cases where either the source or destination is an empty 
-		buffer.
-
-    Data Type Variations:
-        Test different data types (e.g., characters, integers, structures) for source and destination.
-
-    Large Copy Sizes:
-        Test cases with large n values, ensuring that memory allocation and copying work as expected.
-
-    Buffer Bounds:
-        Test cases where dest or src is located at the beginning or end of allocated memory, checking if memmove handles boundaries correctly.
-
-    Performance Testing:
-        Test memmove with very large data sets to ensure it performs efficiently.
-
-    Usage with Complex Data Structures:
-        Test memmove with complex data structures like arrays of structures or nested structures.
-
-    Alignment:
-        Test cases where the source and destination memory regions have different alignment requirements.
-
-    Corner Cases:
-        Special scenarios such as copying data across different memory segments (e.g., heap and stack) or memory protection boundaries.
-*/
 char *string_gen(int size);
 
 void assert(int condition);
@@ -38,31 +9,72 @@ void assert(int condition);
 int main(void)
 {
 //test 0 - Destination range is entirely within the source range.
-	char	my_dest0[7];
-	char	src0[] = "is good";
+	char	my_dest0[10];
+	char	src0[] = "is good, really good";
     size_t     len0;
-	char	dst0[7];
+	char	dest0[7];
 
     len0 = 7;
     ft_memmove(my_dest0, src0, len0);
-	dst[len0] = '\0';
-    memmove(dst0, src0, len0);
-	dst1[len] = '\0';
-    //printf("%s\n", dst);
-    //printf("%s\n", dst1);
-	assert(memcmp(dst, dst1, len) == 0);
+    memmove(dest0, src0, len0);
+    //printf("%s\n", my_dest0);
+    //printf("%s\n", dest0);
+	assert(memcmp(my_dest0, dest0, len0) == 0);
 //test 1 - len = 0
-	char	my_d[7];
-	char	source[] = "is good";
+	char	my_dest1[7];
+	char	src1[] = "is good";
     size_t     len1;
-	char	d[7];
+	char	dest1[7];
 
     len1 = 0;
-    ft_memmove(my_d, source, len1);
-    memmove(d, source, len1);
-    //printf("%s\n", my_d);
-    //printf("%s\n", d);
-	assert(memcmp(dst, dst1, len) == 0);
+    ft_memmove(my_dest1, src1, len1);
+    memmove(dest1, src1, len1);
+    //printf("%s\n", my_dest1);
+    //printf("%s\n", dest1);
+	assert(memcmp(my_dest1, dest1, len1) == 0);
+//test 2 - src empty
+	char	my_dest2[7];
+	char	src2[] = "";
+    size_t     len2;
+	char	dest2[7];
+
+    len2 = 5;
+    ft_memmove(my_dest2, src2, len2);
+    memmove(dest2, src2, len2);
+    //printf("%s\n", my_dest2);
+    //printf("%s\n", dest2);
+	assert(memcmp(my_dest2, dest2, len2) == 0);
+//test 3 - large source
+	char	my_dest3[60];
+	char	src3[] = "a123456789b123456789c123456789d123456789e123456789f123456789g123456789h";
+	char	dest3[60];
+	size_t len3;
+
+    len3 = 59;
+    ft_memmove(my_dest3, src3, len3);
+    memmove(dest3, src3, len3);
+    //printf("My: %s\n", my_dest3);
+    //printf("Default: %s\n", dest3);
+	assert(memcmp(my_dest3, dest3, len3) == 0);
+//test 4 - with integer
+	int my_array[15];
+	int array[15];
+	int source[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+	int len4;
+
+	len4 = 8 * sizeof(int);
+	ft_memmove(my_array, source, len4);
+	memmove(array, source, len4);
+	for (size_t i = 0; i < len4/sizeof(int); i++)
+    {
+        assert(my_array[i] == array[i]);
+        //printf("arr[%zu] = %d\n", i, my_array[i]);
+    }
+//Adtional test
+	char csrc[100] = "Geeksfor";  
+	memmove(csrc+5, csrc, strlen(csrc)+1);  
+	//printf("%s\n", csrc); 
+//Final
     printf("Test succed\n");
 	return (0);
 }
