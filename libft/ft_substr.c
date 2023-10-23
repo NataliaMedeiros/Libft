@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:22:34 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 09:42:44 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/23 19:34:04 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 		i++;
 	}
+    substring[i] = '\0';
 	return (substring);
 }

@@ -21,74 +21,55 @@
 
 int	count_words(char const *s, char c)
 {
-	int		i;
-	int		i_word;
+	int		i;//index counts the chars
+	int		i_word; //this counts the words
 
 	i = 0;
 	i_word = 0;
-	while (s[i] != '\0')
+	while (s[i] != '\0') //percorrer todas as letras
 	{
-		if (s[i] == c)
+		if (s[i] == c) //para encontrar onde fazer o split
 		{
 			i_word++;
 		}
 		i++;
 	}
-	return (i_word);
+	return (i_word); //retorna quantas palavras novas teremos
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**result;
+	char	**new_word; //matriz
+	char	*start; //para encontrar o comeco de uma palavra nova
 	int		i;
-	int		i_word;
-	int		start_word;
-	// int		str_length;
 
-	result = NULL;
-	i_word = count_words(s, c);
-	i = 0;
-	printf("%d\n", i_word);
-	result = (char **)malloc((i_word + 2) * sizeof(char *));
-	if (result == NULL)
+	new_word = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (new_word == NULL)
 	{
 		return (NULL);
 	}
-	result[i_word + 1] = NULL;
-	i_word = 0;
 	i = 0;
-	start_word = 0;
-	while (s[i] != '\0')
+	while (*s != '\0') //enquanto a palavra nao acabar
 	{
-		if (s[i] == c)
+		if (*s != c)//av - ocad - o is g - o - od!!
 		{
-			printf("IF\n");
-			result[i_word] = (char *)malloc(i - start_word + 1);
-			if(result[i_word] == NULL)
+			start = (char *)s;//a vai ser o comeco da nova palavra
+			while (*s != c && *s != '\0')
 			{
-				return (NULL);
+				s++;
 			}
-			i_word++;
-			start_word = i + 1;
+			new_word[i] = ft_substr(start, 0, s - start);
+			printf("%s\n", new_word[i]);
+			i++;
 		}
-		i++;
-	}
-	i_word = 0;
-	i = 0;
-	start_word = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c && s[i] != '\0')
+		else
 		{
-			printf("IF2\n");
-			i_word++;
-			start_word = i + 1;
+			s++;
 		}
-		result[i_word][i] = s[i];
-		printf("%c\n", result[i_word][i]);
-		i++;
+		//i++;
 	}
-	return (result);
+	new_word[i] = NULL;
+	return (new_word);
 }
 
 
