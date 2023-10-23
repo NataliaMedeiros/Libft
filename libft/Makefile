@@ -24,6 +24,9 @@ Files = ft_isalpha \
 		ft_calloc \
 		ft_substr \
 		ft_strjoin \
+		ft_strtrim \
+		ft_split \
+
 
 OUTN = $(Library).a
 CFILES = $(Files:%=%.c)
