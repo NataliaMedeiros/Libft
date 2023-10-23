@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main_ft_substr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 18:21:23 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 09:00:51 by nmedeiro         ###   ########.fr       */
+/*   Created: 2023/10/23 09:24:03 by nmedeiro          #+#    #+#             */
+/*   Updated: 2023/10/23 09:50:18 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
+#include <bsd/string.h>
+#include "../libft/libft.h"
 
-/* #include <string.h>
-
-       char *strdup(const char *s);
-
-       char *strndup(const char *s, size_t n);
-       char *strdupa(const char *s);
-       char *strndupa(const char *s, size_t n);
-       */
-#include "libft.h"
-
-char	*ft_strdup(const char *s)
+int	main(void)
 {
-	char	*new_s;
+	char	*s;
+	int		start;
+	size_t	len;
 
-	new_s = malloc(ft_strlen(s));
-	ft_strlcpy(new_s, s, ft_strlen(s));
-	return (new_s);
+	s = "avocado";
+	start = 2;
+	len = 5;
+	printf("%s", ft_substr(s, start, len));
 }

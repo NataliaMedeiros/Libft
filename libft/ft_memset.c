@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:21:17 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/18 18:21:18 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/23 08:59:52 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*new_b = (unsigned char *)b;
+	unsigned char	*new_b;
 	size_t			i;
 
+	new_b = (unsigned char *)b;
 	i = 0;
 	while (i < len)
 	{

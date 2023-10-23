@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:01:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/16 14:06:49 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/23 09:01:20 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	n;
-	size_t len;
+	size_t	len;
 
 	i = 0;
 	n = 0;
 	len = ft_strlen(dst) + ft_strlen(src);
-
 	if (size == 0 && ft_strlen(dst) > 0)
-	{
 		return (0);
-	}
 	if ((size_t)ft_strlen(dst) > size)
 	{
 		return (ft_strlen(dst) + size + 1);

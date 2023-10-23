@@ -22,6 +22,8 @@ Files = ft_isalpha \
 		ft_memcpy \
 		ft_memmove \
 		ft_calloc \
+		ft_substr \
+		ft_strjoin \
 
 OUTN = $(Library).a
 CFILES = $(Files:%=%.c)

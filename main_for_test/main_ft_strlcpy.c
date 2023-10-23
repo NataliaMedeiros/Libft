@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 #include "../libft/libft.h"
 
 void assert (int condition);

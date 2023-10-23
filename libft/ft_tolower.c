@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:03:43 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/18 12:10:44 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/23 09:03:17 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ RETURN VALUE
 */
 #include "libft.h"
 
-int	ft_tolower(int	c)
+int	ft_tolower(int c)
 {
-	if(c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
 		c += 32;
 	}
