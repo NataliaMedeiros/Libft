@@ -26,6 +26,7 @@ Files = ft_isalpha \
 		ft_strjoin \
 		ft_strtrim \
 		ft_split \
+		ft_itoa \
 
 
 OUTN = $(Library).a
