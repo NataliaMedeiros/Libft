@@ -17,6 +17,7 @@ for file in ${INCL_FILES} ; do
         main_for_test/main_${FILE_NAME} \
         assert.c \
         string_gen.c \
+        check_malloc.c \
         -L. -Llibft -lft \
         -o exec/${FILE_NAME%%.*}
 

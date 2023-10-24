@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: natalia <natalia@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/10/24 17:19:02 by natalia           #+#    #+#              #
+#    Updated: 2023/10/24 17:46:27 by natalia          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 Library = libft
 Files = ft_isalpha \
 		ft_isascii \
@@ -43,8 +55,10 @@ NAME = $(OUTN)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-$(NAME):
-	$(CC) $(CFLAGS) -c $(CFILES) -I./
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+#$(NAME):
+#	$(CC) $(CFLAGS) -c $(CFILES) -I./
 
 $(NAME): $(OFILES)
 	ar -rc $(OUTN) $(OFILES)

@@ -6,14 +6,19 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:51:10 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/24 15:41:21 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/24 17:35:21 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-#ifndef	LIBFT_H
-#define	LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <unistd.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <string.h>
+# include <stdio.h>
+# include <ctype.h>
+# include <stddef.h>
 
 int		ft_isalpha(int c);
 
