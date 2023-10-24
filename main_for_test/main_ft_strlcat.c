@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include <bsd/string.h>
+//#include <bsd/string.h>
+#include <string.h>
 #include "../libft/libft.h"
 
-/* 
+/*
 testa tamanho da STRING
 testa tamanho MENOR STRING
 testa tamanho MAIOR STRING

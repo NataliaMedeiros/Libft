@@ -1,4 +1,5 @@
-#include <bsd/stdio.h>
+//#include <bsd/stdio.h>
+#include <string.h>
 #include <string.h>
 #include "../libft/libft.h"
 
@@ -11,13 +12,13 @@ int	main(void)
 
     assert(ft_strchr(s, ch) == strchr(s, ch));
 	printf("Succes '%s' is iqual = '%s'\n", ft_strchr(s, ch), strchr(s, ch));
-    
+
     s = "www.ns.nl";
 	ch = '.';
 
     assert(ft_strchr(s, ch) == strchr(s, ch));
 	printf("Succes '%s' is iqual = '%s'\n", ft_strchr(s, ch), strchr(s, ch));
-	
+
     s = "I love coffee!!!";
 	ch = '.';
 

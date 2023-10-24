@@ -1,4 +1,5 @@
-#include <bsd/stdio.h>
+//#include <bsd/stdio.h>
+#include <string.h>
 #include <string.h>
 #include "../libft/libft.h"
 
@@ -50,7 +51,7 @@ int main(void)
         //printf("position %d -> %d = %d\n", i, t3[i], ot3[i]);
         assert(t3[i] == ot3[i]);
     }
-//test 4   
+//test 4
     int t4[5];
     int ot4[5];
     int n4 = sizeof(t4);

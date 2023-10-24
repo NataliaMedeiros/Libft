@@ -1,4 +1,5 @@
-#include <bsd/string.h>
+//#include <bsd/string.h>
+#include <string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 
@@ -71,9 +72,9 @@ int main(void)
         //printf("arr[%zu] = %d\n", i, my_array[i]);
     }
 //Adtional test
-	char csrc[100] = "Geeksfor";  
-	memmove(csrc+5, csrc, strlen(csrc)+1);  
-	//printf("%s\n", csrc); 
+	char csrc[100] = "Geeksfor";
+	memmove(csrc+5, csrc, strlen(csrc)+1);
+	//printf("%s\n", csrc);
 //Final
     printf("Test succed\n");
 	return (0);

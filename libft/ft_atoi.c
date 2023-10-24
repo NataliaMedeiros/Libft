@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:02:40 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/18 18:39:11 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:50:28 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-       Library: 
+       Library:
               include <stdlib.h>
        Definition:
               int atoi(const char *nptr);
 
-the * 10 makes the number go one space to the right, example, 
+the * 10 makes the number go one space to the right, example,
 if nptr was 1994 and initial number was 0 this line will do:
 0 * 10 + 1 and then 1 * 10 + 9 and then 19 * 10 + 9 and then
 199 *10 + 4 and the number will return 1994

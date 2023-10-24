@@ -1,9 +1,10 @@
-#include <bsd/stdio.h>
-#include <stdlib.h> 
+//#include <bsd/stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include <string.h>
 #include "../libft/libft.h"
 
-// #define ASSERT(condition) if(!(condition)) { printf("ATENTION: Test failed at file %s and line %d\n", __FILE__, __LINE__); \return (1);} 
+// #define ASSERT(condition) if(!(condition)) { printf("ATENTION: Test failed at file %s and line %d\n", __FILE__, __LINE__); \return (1);}
 
 void assert (int condition);
 

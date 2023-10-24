@@ -1,4 +1,5 @@
-#include <bsd/string.h>
+//#include <bsd/string.h>
+#include <string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 
@@ -20,17 +21,17 @@ int main(void)
 //test 1 - should find correspondence
 
 //test 2 - edge case len equal 0 (should return null)
-   
+
 //test 5 - Egde case len bigger than big
- 
+
 //test 6 - Egde case matching at the and and len = big string length
-    
+
 //test 9 - Egde case big contains multiple matches
 
 //test 11 - Egde case Case sensitivity
-   
+
 //test 12 - Egde case Case sensitivity
-   
+
 //final
     printf("Test succed\n");
     return (0);

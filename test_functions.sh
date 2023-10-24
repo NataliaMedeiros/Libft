@@ -1,5 +1,8 @@
 #!/bin/bash
 
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+
 INCL_FILES=$(find libft -type f -name '*.c')
 for file in ${INCL_FILES} ; do
     FILE_NAME=$(basename "$file")
@@ -15,9 +18,9 @@ for file in ${INCL_FILES} ; do
         assert.c \
         string_gen.c \
         -L. -Llibft -lft \
-        -lbsd \
-        -o exec/${FILE_NAME%%.*} 
+        -o exec/${FILE_NAME%%.*}
 
+        echo "Compiling file ${BOLD} ${FILE_NAME} ${RESET}"
         if [ $? -eq 0 ]; then
             echo "Compilation successful for file ${FILE_NAME}. Starting tests"
             ./exec/${FILE_NAME%%.*}
@@ -25,7 +28,7 @@ for file in ${INCL_FILES} ; do
         	echo "Compilation failed  for file ${FILE_NAME}."
     	fi
 
-    else 
+    else
        echo "ATENTION: Main not found for ${FILE_NAME} skipping."
     fi
 

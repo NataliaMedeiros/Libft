@@ -1,9 +1,22 @@
-#include <bsd/stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_ft_calloc.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/24 13:58:04 by natalia           #+#    #+#             */
+/*   Updated: 2023/10/24 13:58:20 by natalia          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <bsd/stdio.h>
+#include <string.h>
 #include <string.h>
 #include "../libft/libft.h"
 #include <stdlib.h>
 
-void assert (int condition);
+void	assert(int condition);
 
 int main(void)
 {

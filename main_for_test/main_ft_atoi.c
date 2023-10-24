@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 08:28:06 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 08:30:14 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:57:30 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/stdio.h>
+//#include <bsd/stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "../libft/libft.h"
 
