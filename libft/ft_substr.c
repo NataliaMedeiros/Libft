@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:22:34 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 19:34:04 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:38:03 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
     Prototype
         char *ft_substr(char const *s, unsigned int start,
 size_t len);
-    Parameters 
+    Parameters
         s: The string from which to create the substring.
         start: The start index of the substring in the string ’s’.
         len: The maximum length of the substring.
@@ -38,7 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substring;
 	size_t	i;
 
-	substring = malloc(len);
+	substring = malloc(len + 1);
 	i = 0;
 	if (substring == NULL)
 	{
@@ -50,6 +50,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 		i++;
 	}
-    substring[i] = '\0';
+	substring[i] = '\0';
 	return (substring);
 }

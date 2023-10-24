@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 10:17:43 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 10:48:56 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:42:22 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
     Return value:
         The trimmed string.
         NULL if the allocation fails.
-    External functs: 
+    External functs:
         malloc
     Description:
          Allocates (with malloc(3)) and returns a copy of
@@ -56,3 +56,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_s1[new_len] = '\0';
 	return (new_s1);
 }
+
