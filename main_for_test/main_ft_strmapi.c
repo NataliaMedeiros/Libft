@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_ft_strlcpy.c                                  :+:      :+:    :+:   */
+/*   main_ft_strmapi.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:14:24 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/24 15:14:25 by natalia          ###   ########.fr       */
+/*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
+/*   Updated: 2023/10/24 15:12:31 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-// #include <bsd/string.h>
+// #include <bsd/stdio.h>
 #include <string.h>
+#include <string.h>
+#include <stdlib.h>
+
 #include "../libft/libft.h"
 
-void assert (int condition);
+char	my_function(unsigned int index, char c)
+{
+	if (index % 2 == 0)
+	{
+		return ((char)ft_toupper(c));
+	}
+	else
+	{
+		return ((char)ft_tolower(c));
+	}
+}
 
 int	main(void)
 {
-	char	dst[] = "avocado";
-	char	src[] = "is good";
-    char	dst1[] = "avocado";
-	char	src1[] = "is good";
-    size_t     len;
+	char	*input;
+	char	*result;
 
-    len = 5;
-	ft_strlcpy(dst, src, len);
-    assert(ft_strlcpy(dst, src, len) == strlcpy(dst1, src1, len));
-	printf("%s\n", dst);
-	printf("%zu\n", ft_strlcpy(dst, src, len));
-	printf("%zu\n", strlcpy(dst1, src1, len));
+	input = "Hello, World!";
+	result = ft_strmapi(input, &my_function);
+	printf("Result: %s\n", result);
+	free(result);
 	return (0);
 }

@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_ft_strlen.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/24 15:12:40 by natalia           #+#    #+#             */
+/*   Updated: 2023/10/24 15:14:09 by natalia          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // #include <bsd/string.h>
 #include <string.h>
 #include <stdint.h>
 #include "../libft/libft.h"
 
-void assert (int condition);
+void	assert(int condition);
 
 int	main(void)
 {

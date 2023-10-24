@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "../libft/libft.h"
 
+int	test_itoa(char *buffer, int n)
+{
+	sprintf(buffer, "%i", n);
+}
+
 int	main(void)
 {
 	printf("%s\n", ft_itoa(1994));
