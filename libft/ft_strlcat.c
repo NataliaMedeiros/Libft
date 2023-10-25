@@ -6,13 +6,13 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 18:01:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/25 12:11:13 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/25 15:25:06 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {
 	size_t	i;
 	size_t	n;

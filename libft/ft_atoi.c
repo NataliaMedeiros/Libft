@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:02:40 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/24 13:50:28 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/25 17:36:57 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,34 @@ if nptr was 1994 and initial number was 0 this line will do:
 #include <stdlib.h>
 #include <stdio.h>
 
+int	look_special_char(const char *nptr)
+{
+	int	i;
+
+	i = 0;
+	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t'
+		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+	{
+		i++;
+	}
+	return (i);
+}
+
 int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	number;
 	int	positive_or_negative;
 
-	i = 0;
+	i = look_special_char(nptr);
 	number = 0;
 	positive_or_negative = 1;
-	if (nptr[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		positive_or_negative = -1;
+		if (nptr[i] == '-')
+		{
+			positive_or_negative = -1;
+		}
 		i++;
 	}
 	while (nptr[i] != '\0')
@@ -43,9 +59,8 @@ int	ft_atoi(const char *nptr)
 		if (nptr[i] >= '0' && nptr[i] <= '9')
 			number = number * 10 + (nptr[i] - '0');
 		else
-			return (number);
+			return (number * positive_or_negative);
 		i++;
 	}
-	number *= positive_or_negative;
-	return (number);
+	return (number * positive_or_negative);
 }

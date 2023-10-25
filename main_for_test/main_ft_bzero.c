@@ -3,7 +3,7 @@
 #include <string.h>
 #include "../libft/libft.h"
 
-void assert (int condition);
+void	assert(int test_number, int condition);
 
 int main(void)
 {
@@ -13,33 +13,21 @@ int main(void)
     int n = 10;
     ft_bzero(t, n);
     bzero(ot, n);
-    for(int i = 0; i < n; i++)
-    {
-        //printf("position %d -> %c = %c\n", i, t[i], ot[i]);
-        assert(t[i] == ot[i]);
-    }
+    assert(0, (strcmp(t, ot) == 0));
 //test 1
     char t1[] = "I love coffee";
     char ot1[] = "I love coffee";
     int n1 = sizeof(t1);
     ft_bzero(t1, n1);
     bzero(ot1, sizeof(ot1));
-    for(int i = 0; i < n1; i++)
-    {
-        //printf("position %d -> %c = %c\n", i, t1[i], ot1[i]);
-        assert(t1[i] == ot1[i]);
-    }
+    assert(1, (strcmp(t1, ot1) == 0));
 //test 2
     char t2[] = "";
     char ot2[] = "";
     int n2 = sizeof(t2);
     ft_bzero(t2, n2);
     bzero(ot2, sizeof(ot2));
-    for(int i = 0; i < n2; i++)
-    {
-        //printf("position %d -> %c = %c\n", i, t2[i], ot2[i]);
-        assert(t2[i] == ot2[i]);
-    }
+    assert(2, (strcmp(t2, ot2) == 0));
 //test 3
     int t3[] = {1, 2, 3, 4, 5};
     int ot3[] = {1, 2, 3, 4, 5};
@@ -49,7 +37,7 @@ int main(void)
     for(int i = 0; i < n3/4; i++)
     {
         //printf("position %d -> %d = %d\n", i, t3[i], ot3[i]);
-        assert(t3[i] == ot3[i]);
+        assert(3, t3[i] == ot3[i]);
     }
 //test 4
     int t4[5];
@@ -60,7 +48,7 @@ int main(void)
     for(int i = 0; i < n4/4; i++)
     {
         //printf("position %d -> %d = %d\n", i, t4[i], ot4[i]);
-        assert(t4[i] == ot4[i]);
+        assert(4, t4[i] == ot4[i]);
     }
 //test 5
     int t5[10000];
@@ -70,9 +58,9 @@ int main(void)
     bzero(ot5, sizeof(ot5));
     for(int i = 0; i < n5/4; i++)
     {
-        assert(t5[i] == ot5[i]);
+        assert(5, t5[i] == ot5[i]);
     }
-//test final
+// test final
     printf("Test succed\n");
     return (0);
 }

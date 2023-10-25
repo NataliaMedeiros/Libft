@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:51:10 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/24 17:35:21 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/25 15:40:07 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,6 @@ char	*ft_itoa(int n);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
-void	t_striteri(char *s, void (*f)(unsigned int, char*));
-
 void	ft_putchar_fd(char c, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
@@ -90,4 +88,5 @@ void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
 
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif

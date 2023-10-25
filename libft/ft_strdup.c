@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:21:23 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 09:00:51 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:32:07 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 
 /* #include <string.h>
 
@@ -20,6 +18,7 @@
        char *strdupa(const char *s);
        char *strndupa(const char *s, size_t n);
        */
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

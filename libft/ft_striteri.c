@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 12:09:58 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/25 12:09:59 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/25 15:32:14 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@
 		address to ’f’ to be modified if necessary.
 */
 
-void	t_striteri(char *s, void (*f)(unsigned int, char*))
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 

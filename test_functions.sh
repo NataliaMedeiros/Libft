@@ -3,7 +3,24 @@
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
 
-INCL_FILES=$(find libft -type f -name '*.c')
+rm -rf exec
+
+mkdir exec
+
+cd libft
+
+make re
+
+cd ..
+
+if [ -n "$1" ]; then
+    FUNCTION_NAME="$1"
+    echo "abacate"
+    INCL_FILES=$(find libft -type f -name ${FUNCTION_NAME}'.c')
+else
+    INCL_FILES=$(find libft -type f -name '*.c')
+fi
+
 for file in ${INCL_FILES} ; do
     FILE_NAME=$(basename "$file")
 
@@ -11,7 +28,6 @@ for file in ${INCL_FILES} ; do
 
         echo "__________________________________________________________________________
         "
-
         cc  -Wall -Werror -Wextra \
         libft/${FILE_NAME} \
         main_for_test/main_${FILE_NAME} \
@@ -36,3 +52,9 @@ for file in ${INCL_FILES} ; do
     echo " "
 
 done
+
+cd libft
+
+make fclean
+
+cd ..
