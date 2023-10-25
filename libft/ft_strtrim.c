@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 10:17:43 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/24 13:42:22 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/25 12:10:59 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_s1[new_len] = '\0';
 	return (new_s1);
 }
-

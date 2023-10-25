@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:43:15 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/24 13:44:57 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/25 12:12:08 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char	*ft_itoa(int n)
 	int		len;
 
 	new_n = malloc(12);
-
 	if (n == -2147483648)
 		new_n = "-2147483648";
 	else
@@ -69,5 +68,3 @@ char	*ft_itoa(int n)
 	}
 	return (new_n);
 }
-
-
