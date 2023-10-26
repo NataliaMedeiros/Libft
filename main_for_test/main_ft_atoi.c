@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 08:28:06 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/25 17:34:13 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/26 09:15:40 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <bsd/stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <bsd/string.h>
+#include <stdlib.h>
 #include "../libft/libft.h"
 
 void	assert(int test_number, int condition);

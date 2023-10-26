@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:02:40 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/25 17:36:57 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/26 09:12:50 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-       Library:
-              include <stdlib.h>
-       Definition:
-              int atoi(const char *nptr);
-
-the * 10 makes the number go one space to the right, example,
-if nptr was 1994 and initial number was 0 this line will do:
-0 * 10 + 1 and then 1 * 10 + 9 and then 19 * 10 + 9 and then
-199 *10 + 4 and the number will return 1994
-*/
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	look_special_char(const char *nptr)
 {

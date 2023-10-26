@@ -6,11 +6,10 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:03:13 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 08:58:29 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 11:13:16 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*int memcmp(const void *s1, const void *s2, size_t n);*/
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

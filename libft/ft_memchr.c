@@ -6,11 +6,9 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:03:09 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/23 08:56:56 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 09:36:11 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* void *memchr(const void *s, int c, size_t n);*/
 
 #include "libft.h"
 

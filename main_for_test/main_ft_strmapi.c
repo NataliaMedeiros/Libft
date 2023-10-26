@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_strmapi.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/24 15:12:31 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/26 08:24:28 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <bsd/stdio.h>
-#include <string.h>
+#include <bsd/stdio.h>
 #include <string.h>
 #include <stdlib.h>
 

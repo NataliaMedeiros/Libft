@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 13:51:42 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/24 13:55:38 by natalia          ###   ########.fr       */
+/*   Created: 2023/10/26 08:19:25 by nmedeiro          #+#    #+#             */
+/*   Updated: 2023/10/26 08:36:09 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@
 */
 #include <stdlib.h> //library allowed because of malloc
 #include "libft.h"
-#include <stdio.h>
 
 int	count_words(char const *s, char c)
 {
@@ -67,7 +66,6 @@ char	**ft_split(char const *s, char c)
 			while (*s != c && *s != '\0')
 				s++;
 			new_word[i] = ft_substr(start, 0, s - start);
-			printf("%s\n", new_word[i]);
 			i++;
 		}
 		else

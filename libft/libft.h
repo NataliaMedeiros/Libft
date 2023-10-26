@@ -3,32 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:51:10 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/25 15:40:07 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/26 12:08:28 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
-# include <stddef.h>
 # include <stdlib.h>
-# include <string.h>
-# include <stdio.h>
-# include <ctype.h>
-# include <stddef.h>
 
 int		ft_isalpha(int c);
 
-int		ft_isdigit(char c);
+int		ft_isdigit(int c);
 
 int		ft_isalnum(int c);
 
 int		ft_isascii(int c);
 
-int		ft_isprint(char c);
+int		ft_isprint(int c);
 
 size_t	ft_strlen(const char *c);
 
@@ -40,11 +35,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
-size_t	ft_strlcpy(char *restrict dst, \
-					const char *restrict src, \
-					size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int		ft_toupper(int c);
 

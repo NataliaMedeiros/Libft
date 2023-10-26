@@ -1,59 +1,52 @@
-//#include <bsd/string.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_ft_memchr.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/26 08:22:27 by nmedeiro          #+#    #+#             */
+/*   Updated: 2023/10/26 09:53:17 by nmedeiro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+	test 0 - should find correspondence
+	test 1 - should find correspondence
+	test 2 - edge case len equal 0 (should return null)
+	test 3 - Egde case len bigger than big
+	test 4 - Egde case matching at the and and len = big string length
+	test 5 - Egde case big contains multiple matches
+	test 6 - Egde case Case sensitivity
+	test 7 - Egde case Case sensitivity
+*/
+#include <bsd/string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 
-char *string_gen(int size);
+char	*string_gen(int size);
 
-void assert(int condition);
+void	assert(int test_number, int condition);
 
-int main(void)
+int	test_ft_menchr(int test_nb, char *s, char c, int n)
 {
-//test 0 - should find correspondence
-    char *s0 = "avocado";
-    char c0 = 'c';
-    int n0 = 6;
+	assert(test_nb, ft_memchr(s, c, n) == memchr(s, c, n));
+	return (0);
+}
 
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    printf("test 0 = %p\n", ft_memchr(s0, c0, n0));
-//test 1 - should find correspondence
-    n0 = 4;
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    // printf("test 1 = %p \n", ft_memchr(s0, c0, n0));
-//test 2 - edge case len equal 0 (should return null)
-    n0 = 0;
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    // printf("test 2 = %p \n", ft_memchr(s0, c0, n0));
-//test 5 - Egde case len bigger than big
-    c0 = 'v';
-    n0 = 50;
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    // printf("test 5 = %p \n", ft_memchr(s0, c0, n0));
-//test 6 - Egde case matching at the and and len = big string length
-    c0 = 'e';
-    n0 = ft_strlen(s0);
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    // printf("test 6 = %p \n", ft_memchr(s0, c0, n0));
-//test 9 - Egde case big contains multiple matches
-    s0 = "one cat, two cats, three cats, a lot of cats";
-    c0 = 'c';
-    n0 = ft_strlen(s0);
-    // char* result = ft_memchr(s0, c0, n0);
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    // printf("test 9 = %p is '%s'\n", ft_memchr(s0, c0, n0), result);
-//test 11 - Egde case Case sensitivity
-    s0 = "Case SEnsitivity";
-    c0 = 'S';
-    n0 = 20;
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    // printf("test 11 = %p \n", ft_memchr(s0, c0, n0));
-//test 12 - Egde case Case sensitivity
-    s0 = "Case SEnsitivity";
-    c0 = 's';
-    n0 = 20;
-    assert(ft_memchr(s0, c0, n0) == memchr(s0, c0, n0));
-    // printf("test 11 = %p \n", ft_memchr(s0, c0, n0));
-//final
-    printf("Test succed\n");
-    return (0);
+int	main(void)
+{
+	char	*s;
+
+	s = "one cat, two cats, three cats, a lot of cats";
+	test_ft_menchr(0, "avocado", 'c', 6);
+	test_ft_menchr(1, "avocado", 'c', 4);
+	test_ft_menchr(2, "avocado", 'c', 0);
+	test_ft_menchr(3, "avocado", 'v', 50);
+	test_ft_menchr(4, "avocado", 'e', ft_strlen("avocado"));
+	test_ft_menchr(5, s, 'c', ft_strlen(s));
+	test_ft_menchr(6, "Case SEnsitivity", 'S', 20);
+	test_ft_menchr(7, "Case SEnsitivity", 's', 20);
+	printf("Test succed\n");
+	return (0);
 }

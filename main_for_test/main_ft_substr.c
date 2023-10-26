@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_substr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:24:03 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/24 14:00:49 by natalia          ###   ########.fr       */
+/*   Updated: 2023/10/26 08:25:04 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
-// #include <bsd/string.h>
+#include <bsd/string.h>
 #include "../libft/libft.h"
 
 int	main(void)
