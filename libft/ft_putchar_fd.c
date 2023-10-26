@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:18:45 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:36:55 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:30:24 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (1, &c, fd);
+	write (fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:23:27 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:23:28 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:53:39 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 
 	s1 = "avocado is good!!";
     c = 'o';
-ft_split(s1, c);
+	ft_split(s1, c);
 
 	return (0);
 }

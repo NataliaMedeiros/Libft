@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:18:51 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:36:38 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:45:48 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ void	ft_putendl_fd(char *s, int fd)
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	write(1, "\n", 1);
+	ft_putchar_fd('\n', fd);
 }

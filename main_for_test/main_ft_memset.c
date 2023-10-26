@@ -6,51 +6,48 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:23:02 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:23:02 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:26:19 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* #define ASSERT(condition) if(!(condition)) { 
+	printf("ATENTION: Test failed at file %s and line %d\n", __FILE__, __LINE__);
+	return (1);}
+*/
 
 #include <bsd/stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "../libft/libft.h"
 
-// #define ASSERT(condition) if(!(condition)) { printf("ATENTION: Test failed at file %s and line %d\n", __FILE__, __LINE__); \return (1);}
+void	assert(int test_number, int condition);
 
-void assert (int condition);
+int	test_ft_memset(int test_number, char *b, int c, size_t n)
+{
+	char	*b1;
+
+	b1 = b;
+	ft_memset(b, c, n);
+	memset(b1, c, n);
+	assert(test_number, strcmp(b, b1) == 0);
+	return (0);
+}
 
 int	main(void)
 {
-//test 0
 	char	b[] = "I love coffee!!!";
-    char    b2[] = "I love coffee!!!";
+	char    str[] = "Hello, World!";
+	char numbers1[] = "12345";
 
-    ft_memset(b + 2, '.', 4);
-    printf("%s\n", b);
-    memset(b2 + 2, '.', 4);
-    assert(strcmp(b, b2) == 0);
-//test 1
-    char    str1[] = "Hello, World!";
-    char    str2[] = "Hello, World!";
-    ft_memset(str1 + 7, '*', 5);
-    //printf("%s\n", str1);
-    memset(str2 + 7, '*', 5);
-    assert(strcmp(str1, str2) == 0);
-//test 2
-    char numbers1[] = "12345";
-    char numbers2[] = "12345";
-    ft_memset(numbers1 + 1, '0', 3);
-    //printf("%s\n", numbers1);
-    memset(numbers2 + 1, '0', 3);
-    assert(memcmp(numbers1, numbers2, sizeof(numbers1)) == 0);
-//test 3
+	test_ft_memset(0, b + 2, '.', 4);
+	test_ft_memset(1, str + 7, '*', 5);
+	test_ft_memset(2, numbers1 + 1, '0', 3);
+		
 	int array1[] = {1, 2, 3, 4, 5};
 	int array2[] = {1, 2, 3, 4, 5};
 	ft_memset(array1, 0, sizeof(array1));
-	//for (int i = 0; i < 5; i++) {printf("arr[%d] = %d\n", i, array1[i]);}
 	memset(array2, 0, sizeof(array2));
-	assert(memcmp(array1, array2, sizeof(array1)) == 0);
-//test final
+	assert(3, memcmp(array1, array2, sizeof(array1)) == 0);
 	printf("Test succed\n");
     return (0);
 }

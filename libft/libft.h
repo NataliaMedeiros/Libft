@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:51:10 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 12:08:28 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:53:48 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_isprint(int c);
 
 size_t	ft_strlen(const char *c);
 
-void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memset(void *s, int c, size_t n);
 
 void	ft_bzero(void *s, size_t n);
 

@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/26 08:24:28 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:02:10 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(void)
 	char	*result;
 
 	input = "Hello, World!";
-	result = ft_strmapi(input, &my_function);
+	result = ft_strmapi(input, my_function);
 	printf("Result: %s\n", result);
 	free(result);
 	return (0);
