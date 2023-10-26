@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:19:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 19:02:51 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:04:18 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,23 +124,5 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	new_word = filling_new_word(new_word, s, c, i);
-	// while (*s != '\0')
-	// {
-	// 	while (*s && *s == c)
-	// 		s++;
-	// 	if (*s && *s != c)
-	// 	{
-	// 		new_word[i] = malloc_str(s, c);
-	// 		if (new_word[i] == NULL)
-	// 		{
-	// 			free_words(new_word, i);
-	// 			return (NULL);
-	// 		}
-	// 		i++;
-	// 		while (*s != c && *s != '\0')
-	// 			s++;
-	// 	}
-	// }
-	// new_word[i] = NULL;
 	return (new_word);
 }
