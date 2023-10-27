@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:20:03 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:36:27 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:55:34 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 		string, which is the result of the concatenation
 		of ’s1’ and ’s2.
 */
-#include <stdlib.h> //library allowed because of malloc
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

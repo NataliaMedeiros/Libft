@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:22:34 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:20:38 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:55:57 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ size_t len);
         maximum size ’len’.
 */
 
-#include <stdlib.h> //library allowed because of malloc
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

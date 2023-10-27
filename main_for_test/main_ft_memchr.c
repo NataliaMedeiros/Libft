@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:27 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 09:53:17 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:43:14 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	assert(int test_number, int condition);
 int	test_ft_menchr(int test_nb, char *s, char c, int n)
 {
 	assert(test_nb, ft_memchr(s, c, n) == memchr(s, c, n));
+	//printf("%d = %s\n", test_nb, (char *)ft_memchr(s, c, n));
 	return (0);
 }
 
@@ -39,7 +40,7 @@ int	main(void)
 	char	*s;
 
 	s = "one cat, two cats, three cats, a lot of cats";
-	test_ft_menchr(0, "avocado", 'c', 6);
+	test_ft_menchr(0, "avocado", 'd', 4);
 	test_ft_menchr(1, "avocado", 'c', 4);
 	test_ft_menchr(2, "avocado", 'c', 0);
 	test_ft_menchr(3, "avocado", 'v', 50);

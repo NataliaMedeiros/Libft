@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 10:17:43 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:20:36 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:55:52 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
         ’s1’ with the characters specified in ’set’ removed
         from the beginning and the end of the string.
 */
-#include <stdlib.h> //library allowed because of malloc
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:19:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 19:04:18 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:54:57 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
         character ’c’ as a delimiter. The array must end
         with a NULL pointer.
 */
-#include <stdlib.h> //library allowed because of malloc
 #include "libft.h"
 
 int	count_words(char const *s, char c)

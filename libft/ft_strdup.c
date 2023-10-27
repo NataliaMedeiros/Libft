@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:21:23 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:31:53 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:55:27 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
        char *strdupa(const char *s);
        char *strndupa(const char *s, size_t n);
        */
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

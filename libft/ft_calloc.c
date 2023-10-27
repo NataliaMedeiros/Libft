@@ -6,27 +6,26 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:02:50 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 09:20:02 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 19:25:08 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdlib.h>
-       void *calloc(size_t nmemb, size_t size);
-*/
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	total_size;
 	void	*new;
 
-	total_size = nmemb * size;
-	new = malloc(total_size);
-	if (new == NULL)
+	if (nmemb == 0 || size == 0)
 	{
-		return (NULL);
+		nmemb = 1;
+		size = 1;
 	}
-	ft_memset(new, 0, total_size);
+	if ((long) nmemb < 0 || (long) size < 0)
+		return (0);
+	new = malloc(nmemb * size);
+	if (new == NULL)
+		return (NULL);
+	ft_bzero(new, nmemb * size);
 	return (new);
 }
