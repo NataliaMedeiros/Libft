@@ -6,29 +6,9 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:22:34 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/27 13:55:57 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/27 20:55:51 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-    Prototype
-        char *ft_substr(char const *s, unsigned int start,
-size_t len);
-    Parameters
-        s: The string from which to create the substring.
-        start: The start index of the substring in the string ’s’.
-        len: The maximum length of the substring.
-    Return value
-        The substring.
-        NULL if the allocation fails.
-    External functs.
-        malloc
-    Description
-        Allocates (with malloc(3)) and returns a substring
-        from the string ’s’.
-        The substring begins at index ’start’ and is of
-        maximum size ’len’.
-*/
 
 #include "libft.h"
 
@@ -37,13 +17,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substring;
 	size_t	i;
 
-	substring = malloc(len + 1);
-	i = 0;
-	if (substring == NULL)
-	{
+	if (!s)
 		return (NULL);
-	}
-	while (i < len)
+	substring = malloc(len + 1);
+	if (substring == NULL)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	i = 0;
+	while (i < len && start < ft_strlen(s))
 	{
 		substring[i] = s[start];
 		start++;
