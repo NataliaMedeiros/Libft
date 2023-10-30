@@ -6,26 +6,10 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:20:03 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/27 13:55:34 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:41:12 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-    Prototype:
-        char *ft_strjoin(char const *s1, char const *s2);
-    Parameters:
-		s1: The prefix string.
-		s2: The suffix string.
-	Return value:
-		The new string.
-		NULL if the allocation fails.
-	External functs:
-		malloc
-	Description:
-		Allocates (with malloc(3)) and returns a new
-		string, which is the result of the concatenation
-		of ’s1’ and ’s2.
-*/
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -34,11 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 
 	len = ft_strlen(s1) + ft_strlen (s2) + 1;
-	s = (char *)malloc(len);
+	s = (char *)malloc(sizeof(char) * len);
 	if (s == NULL)
-	{
 		return (NULL);
-	}
+	ft_bzero(s, len);
 	ft_strlcat(s, s1, len);
 	ft_strlcat(s, s2, len);
 	return (s);

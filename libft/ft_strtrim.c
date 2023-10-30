@@ -6,52 +6,57 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 10:17:43 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/27 13:55:52 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:27:39 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-    Prototype:
-        char *ft_strtrim(char const *s1, char const *set);
-    Parameters:
-        s1: The string to be trimmed.
-        set: The reference set of characters to trim.
-    Return value:
-        The trimmed string.
-        NULL if the allocation fails.
-    External functs:
-        malloc
-    Description:
-         Allocates (with malloc(3)) and returns a copy of
-        ’s1’ with the characters specified in ’set’ removed
-        from the beginning and the end of the string.
-*/
 #include "libft.h"
+
+int	look_for_set(char c, char const *set)
+{
+	int	i;
+	int	find_set;
+
+	i = 0;
+	find_set = 0;
+	while (set[i] != '\0')
+	{
+		if (set[i] == c)
+			find_set = 1;
+		i++;
+	}
+	i = 0;
+	if (find_set == 1)
+	{
+		while (set[i] != '\0')
+		{
+			if (c == ' ' && set[i - 1] != c)
+				return (1);
+			if (set[i] == c)
+				return (1);
+			i++;
+		}
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new_s1;
-	int		start_i;
-	int		end_i;
+	int		start;
+	int		end;
 	int		new_len;
 
-	start_i = 0;
-	end_i = ft_strlen(s1) - 1;
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	while (start_i < (int)ft_strlen(s1) && ft_strchr(set, s1[start_i]) != NULL)
-	{
-		start_i++;
-	}
-	while (end_i > start_i && ft_strrchr(set, s1[end_i]) != NULL)
-	{
-		end_i--;
-	}
-	new_len = end_i - start_i + 1;
-	new_s1 = malloc(new_len);
+	start = 0;
+	end = ft_strlen(s1) -1;
+	while (s1[start] != '\0' && look_for_set(s1[start], set) == 1)
+		start++;
+	while (end > start && look_for_set(s1[end], set) == 1)
+		end--;
+	new_len = end - start + 2;
+	new_s1 = (char *)malloc(sizeof(char) * new_len);
 	if (new_s1 == NULL)
 		return (NULL);
-	ft_strlcpy(new_s1, s1 + start_i, new_len);
-	new_s1[new_len] = '\0';
+	ft_strlcpy(new_s1, s1 + start, new_len);
 	return (new_s1);
 }
