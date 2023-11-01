@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:02:50 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/27 19:25:08 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/01 08:21:53 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*new;
+	size_t	total;
 
-	if (nmemb == 0 || size == 0)
+	total = nmemb * size;
+	if (nmemb && (total / nmemb) != size)
 	{
-		nmemb = 1;
-		size = 1;
+		return (NULL);
 	}
 	if ((long) nmemb < 0 || (long) size < 0)
 		return (0);

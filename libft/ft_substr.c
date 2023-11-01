@@ -6,7 +6,7 @@
 /*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:22:34 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/30 09:44:37 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/01 08:23:59 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = ft_strlen(s) - start;
 	if (ft_strlen(s) == 1 || start >= ft_strlen(s))
 		len = 0;
+	else if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
 	substring = malloc(len + 1);
 	if (substring == NULL)
 		return (NULL);
