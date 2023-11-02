@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_ft_strmapi.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:32 by natalia          ###   ########.fr       */
+/*   Created: 2023/11/01 18:52:33 by nmedeiro          #+#    #+#             */
+/*   Updated: 2023/11/02 11:43:11 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-#include "../libft/libft.h"
-
-char	my_function(unsigned int index, char c)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (index % 2 == 0)
+	if (lst && del)
 	{
-		return ((char)ft_toupper(c));
+		del(lst->content);
+		free(lst);
 	}
-	else
-	{
-		return ((char)ft_tolower(c));
-	}
-}
-
-int	main(void)
-{
-	char	*input;
-	char	*result;
-
-	input = "Hello, World!";
-	result = ft_strmapi(input, my_function);
-	printf("Result: %s\n", result);
-	free(result);
-	return (0);
+	return ;
 }

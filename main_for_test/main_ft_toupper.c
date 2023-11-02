@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_toupper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:01:10 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/26 08:25:18 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:16:16 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/stdio.h>
 #include <ctype.h>
 #include "../libft/libft.h"
 

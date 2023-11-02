@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+         #
+#    By: natalia <natalia@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 17:19:02 by natalia           #+#    #+#              #
-#    Updated: 2023/10/26 08:20:48 by nmedeiro         ###   ########.fr        #
+#    Updated: 2023/11/02 11:22:01 by natalia          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,12 +46,27 @@ Files = ft_isalpha \
 		ft_putendl_fd \
 		ft_putnbr_fd \
 
+Bonus =	ft_lstnew \
+		ft_lstadd_front \
+		ft_lstsize \
+		ft_lstlast \
+		ft_lstadd_back \
+		ft_lstdelone \
+		ft_lstclear \
+		ft_lstiter \
+		ft_lstmap \
+
 CFILES = $(Files:%=%.c)
+CBONUS = $(Bonus:%=%.c)
+
 OFILES = $(CFILES:%.c=%.o)
+OBONUS = $(CBONUS:%.c=%.o)
 NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+
+all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -59,13 +74,15 @@ CFLAGS = -Wall -Wextra -Werror
 $(NAME): $(OFILES)
 	ar -rc $(NAME) $(OFILES)
 
-all: $(NAME)
+bonus: $(OBONUS)
+	ar -rc $(NAME) $(OBONUS)
 
 clean:
 	rm -f $(OFILES)
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f $(OBONUS)
 
 re: fclean all
 

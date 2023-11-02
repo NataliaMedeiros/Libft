@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_strncmp.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:24:40 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:24:41 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:16:31 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/stdio.h>
 #include <stdlib.h>
 
 #include "../libft/libft.h"

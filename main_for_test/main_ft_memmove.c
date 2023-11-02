@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_memmove.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:53 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:22:53 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:17:11 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 

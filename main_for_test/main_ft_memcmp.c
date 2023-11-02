@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_memcmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:31 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 10:26:52 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:17:15 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 	test 8 - Both variable empty
 */
 
-#include <bsd/string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 

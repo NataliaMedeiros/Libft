@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_memchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:27 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/27 17:43:14 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:17:17 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 	test 6 - Egde case Case sensitivity
 	test 7 - Egde case Case sensitivity
 */
-#include <bsd/string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 

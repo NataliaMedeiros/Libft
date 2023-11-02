@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_bzero.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:14:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:14:26 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:17:31 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <bsd/string.h>
 #include "../libft/libft.h"
 
 void	assert(int test_number, int condition);

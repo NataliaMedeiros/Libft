@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_memset.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:23:02 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 15:26:19 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:17:09 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #define ASSERT(condition) if(!(condition)) { 
+/* #define ASSERT(condition) if(!(condition)) {
 	printf("ATENTION: Test failed at file %s and line %d\n", __FILE__, __LINE__);
 	return (1);}
 */
 
-#include <bsd/stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "../libft/libft.h"
@@ -42,7 +41,7 @@ int	main(void)
 	test_ft_memset(0, b + 2, '.', 4);
 	test_ft_memset(1, str + 7, '*', 5);
 	test_ft_memset(2, numbers1 + 1, '0', 3);
-		
+
 	int array1[] = {1, 2, 3, 4, 5};
 	int array2[] = {1, 2, 3, 4, 5};
 	ft_memset(array1, 0, sizeof(array1));

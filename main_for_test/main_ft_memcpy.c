@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_memcpy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:44 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 14:01:17 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:17:13 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 

@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_ft_strmapi.c                                  :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:32 by natalia          ###   ########.fr       */
+/*   Created: 2023/11/02 11:45:17 by natalia           #+#    #+#             */
+/*   Updated: 2023/11/02 11:50:04 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-#include "../libft/libft.h"
-
-char	my_function(unsigned int index, char c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (index % 2 == 0)
+	// if (!lst || !f)
+	// 	return (NULL);
+	while (lst != NULL)
 	{
-		return ((char)ft_toupper(c));
+		f(lst->content);
+		lst = lst->next;
 	}
-	else
-	{
-		return ((char)ft_tolower(c));
-	}
-}
-
-int	main(void)
-{
-	char	*input;
-	char	*result;
-
-	input = "Hello, World!";
-	result = ft_strmapi(input, my_function);
-	printf("Result: %s\n", result);
-	free(result);
-	return (0);
 }

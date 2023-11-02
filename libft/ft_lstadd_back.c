@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_ft_strmapi.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:32 by natalia          ###   ########.fr       */
+/*   Created: 2023/11/01 16:36:10 by nmedeiro          #+#    #+#             */
+/*   Updated: 2023/11/02 11:44:03 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-#include "../libft/libft.h"
-
-char	my_function(unsigned int index, char c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (index % 2 == 0)
-	{
-		return ((char)ft_toupper(c));
-	}
-	else
-	{
-		return ((char)ft_tolower(c));
-	}
-}
+	t_list	*last;
 
-int	main(void)
-{
-	char	*input;
-	char	*result;
-
-	input = "Hello, World!";
-	result = ft_strmapi(input, my_function);
-	printf("Result: %s\n", result);
-	free(result);
-	return (0);
+	if (lst)
+	{
+		if (*lst)
+		{
+			last = ft_lstlast(*lst);
+			last->next = new;
+		}
+		else
+			*lst = new;
+	}
 }

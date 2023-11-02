@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_calloc.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:58:04 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/26 10:12:40 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:17:30 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
 #include <stdio.h>
 #include "../libft/libft.h"
 #include <stdlib.h>
@@ -24,7 +23,7 @@ int main(void)
 	testsucess = 0;
 //test 1 - creating a int array
 	int	*int_array;
-	
+
 	int_array = (int*) ft_calloc(5, sizeof ( int));
 	if (int_array != NULL)
 	{

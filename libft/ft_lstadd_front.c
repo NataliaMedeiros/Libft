@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_ft_strmapi.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:32 by natalia          ###   ########.fr       */
+/*   Created: 2023/11/01 15:17:22 by nmedeiro          #+#    #+#             */
+/*   Updated: 2023/11/02 11:43:47 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-#include "../libft/libft.h"
-
-char	my_function(unsigned int index, char c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (index % 2 == 0)
+	if (lst)
 	{
-		return ((char)ft_toupper(c));
+		if (*lst)
+		{
+			new->next = *lst;
+		}
+		*lst = new;
 	}
-	else
-	{
-		return ((char)ft_tolower(c));
-	}
-}
-
-int	main(void)
-{
-	char	*input;
-	char	*result;
-
-	input = "Hello, World!";
-	result = ft_strmapi(input, my_function);
-	printf("Result: %s\n", result);
-	free(result);
-	return (0);
 }

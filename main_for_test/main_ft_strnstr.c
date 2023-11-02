@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_strnstr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:05:01 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/26 08:24:49 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:16:29 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <bsd/string.h>
 #include <stdlib.h>
 #include "../libft/libft.h"
 

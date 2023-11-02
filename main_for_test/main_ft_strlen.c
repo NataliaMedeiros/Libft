@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:12:40 by natalia           #+#    #+#             */
-/*   Updated: 2023/10/26 12:21:37 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:16:34 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 
 */
 
-#include <bsd/string.h>
 #include <stdint.h>
 #include <stdio.h>
 #include "../libft/libft.h"

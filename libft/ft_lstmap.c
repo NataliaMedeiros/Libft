@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_ft_strmapi.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:11:39 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:32 by natalia          ###   ########.fr       */
+/*   Created: 2023/11/02 11:26:31 by natalia           #+#    #+#             */
+/*   Updated: 2023/11/02 11:52:11 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-#include "../libft/libft.h"
-
-char	my_function(unsigned int index, char c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (index % 2 == 0)
-	{
-		return ((char)ft_toupper(c));
-	}
-	else
-	{
-		return ((char)ft_tolower(c));
-	}
-}
+	t_list	*new_lst;
+	t_list	*new_node;
 
-int	main(void)
-{
-	char	*input;
-	char	*result;
-
-	input = "Hello, World!";
-	result = ft_strmapi(input, my_function);
-	printf("Result: %s\n", result);
-	free(result);
-	return (0);
+	new_lst = NULL;
+	if (!lst || !f)
+		return (NULL);
+	while (lst)
+	{
+		new_node = ft_lstnew(f(lst->content));
+		if (!new_node)
+		{
+			ft_lstclear(&new_node, del);
+		}
+		ft_lstadd_back(&new_lst, new_node);
+		lst = lst->next;
+	}
+	return (new_lst);
 }
