@@ -3,28 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_bzero.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:14:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/02 11:17:31 by natalia          ###   ########.fr       */
+/*   Updated: 2023/11/03 12:43:23 by nmedeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include <bsd/string.h>
 #include "../libft/libft.h"
 
 void	assert(int test_number, int condition);
 
-int main(void)
+int	test_bzero(int test_number, char t, int n)
+{
+	char	*ot;
+
+	ot = t;
+	ft_bzero(t, n);
+	bzero(ot, n);
+	assert(0, (strcmp(t, ot) == 0));
+}
+
+int	main(void)
 {
 //test 0
-    char t[10];
-    char ot[10];
-    int n = 10;
-    ft_bzero(t, n);
-    bzero(ot, n);
-    assert(0, (strcmp(t, ot) == 0));
+	char t[10];
+	int n = 10;
+
+	test_bzero(0, &t, n);
 //test 1
     char t1[] = "I love coffee";
     char ot1[] = "I love coffee";
