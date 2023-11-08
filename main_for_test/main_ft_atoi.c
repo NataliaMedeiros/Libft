@@ -6,17 +6,15 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 08:28:06 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/02 11:17:33 by natalia          ###   ########.fr       */
+/*   Updated: 2023/11/08 10:57:51 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "../libft/libft.h"
 
-void	assert(int test_number, int condition);
+int	assert(int test_number, int condition);
 
-int		check_malloc(char *buffer);
+int	check_malloc(char *buffer);
 
 int	test_atoi(int test_number, char *t)
 {
@@ -51,5 +49,4 @@ int	main(void)
 	test_atoi(23, "12;3");
 	test_atoi(24, "---");
 	test_atoi(25, "-123THERE IS A NYANCAT UNDER YOUR BED");
-	printf("Test succed\n");
 }

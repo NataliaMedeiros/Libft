@@ -15,7 +15,7 @@ cd ..
 
 if [ -n "$1" ]; then
     FUNCTION_NAME="$1"
-    INCL_FILES=$(find libft -type f -name ${FUNCTION_NAME}'.c')
+    INCL_FILES=$(find libft -type f -name 'ft_'${FUNCTION_NAME}'.c')
 else
     INCL_FILES=$(find libft -type f -name '*.c')
 fi
@@ -34,7 +34,6 @@ for file in ${INCL_FILES} ; do
         string_gen.c \
         check_malloc.c \
         -L. -Llibft -lft \
-        -lbsd \
         -o exec/${FILE_NAME%%.*}
 
         echo "Compiling file ${BOLD} ${FILE_NAME} ${RESET}"

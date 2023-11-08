@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:12 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/02 11:17:23 by natalia          ###   ########.fr       */
+/*   Updated: 2023/11/08 13:23:52 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,16 @@
 #include <stdio.h>
 #include "../libft/libft.h"
 
-void	assert(int test_number, int condition);
+#define SET_COLOR_GREEN "\x1b[32m"
+#define RESET_COLOR_GREEN "\x1b[0m"
+#define SET_COLOR_RED "\x1b[31m"
+#define RESET_COLOR_RED "\x1b[0m"
 
 int	main(void)
 {
+	int	error;
+
+	error = 0;
 	int	res_origin_function;
 
 	for (int c = 0; c <= 530; c++)
@@ -27,8 +33,13 @@ int	main(void)
 		{
 			res_origin_function = 1;
 		}
-		assert(c, ft_isdigit(c) == res_origin_function);
+		if (ft_isdigit(c) != res_origin_function)
+		{
+			printf("%s%d:[failed]%s", SET_COLOR_RED, c, RESET_COLOR_RED);
+			error = 1;
+		}
 	}
-	printf("Test succed\n");
+	if (error == 0)
+		printf("%s[OK]%s\n", SET_COLOR_GREEN, RESET_COLOR_GREEN);
 	return (0);
 }
