@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmedeiro <nmedeiro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:03:17 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/10/26 08:18:03 by nmedeiro         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:55:59 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (dest);
 	}
 	else
-	{
 		return (NULL);
-	}
 }
