@@ -6,23 +6,33 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:22 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/02 11:17:19 by natalia          ###   ########.fr       */
+/*   Updated: 2023/11/08 14:32:12 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
+/*
+for more checks include this code on main, after test 14
+	for (int i = 0; i <= 100 / 2; i++)
+	{
+		int rd = (int)random() - RAND_MAX / 2;
+		test_itoa(6 + i, buffer, rd);
+	}
+*/
 #include "../libft/libft.h"
 
 void	assert(int test_number, int condition);
 
-int		check_malloc(char *buffer);
+void	memory_assert(int test_number, int condition);
 
 int	test_itoa(int test_number, char *buffer, int n)
 {
+	char	*new_n;
+
+	new_n = ft_itoa(n);
 	sprintf(buffer, "%i", n);
-	assert(test_number, (strcmp(ft_itoa(n), buffer) == 0));
+	assert(test_number, (strcmp(new_n, buffer) == 0));
+	memory_assert(test_number, (ft_strlen(buffer)) == ft_strlen(new_n));
+	free(new_n);
 	return (0);
 }
 
@@ -30,8 +40,12 @@ int	main(void)
 {
 	char	*buffer;
 
-	buffer = (char *)malloc(12);
-	check_malloc(buffer);
+	buffer = malloc(12);
+	if (buffer == NULL)
+	{
+		printf("Error: check buffer memory alocation");
+		return (1);
+	}
 	test_itoa(1, buffer, 1994);
 	test_itoa(2, buffer, -1994);
 	test_itoa(3, buffer, -2147483648);
@@ -43,12 +57,9 @@ int	main(void)
 	test_itoa(9, buffer, INT_MIN);
 	test_itoa(10, buffer, -623);
 	test_itoa(11, buffer, -2147483647 -1);
-	for (int i = 0; i <= 100 / 2; i++)
-	{
-		int rd = (int)random() - RAND_MAX / 2;
-		test_itoa(6 + i, buffer, rd);
-	}
-	printf("Test succed\n");
+	test_itoa(12, buffer, 1);
+	test_itoa(13, buffer, -1);
+	test_itoa(14, buffer, 42);
 	free(buffer);
 	return (0);
 }

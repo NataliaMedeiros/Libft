@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 08:22:16 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/08 13:23:15 by natalia          ###   ########.fr       */
+/*   Updated: 2023/11/08 13:28:27 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,13 @@ int	main(void)
 		{
 			res_origin_function = 1;
 		}
-		assert(c, ft_isprint(c) == res_origin_function);
+		if (ft_isprint(c) != res_origin_function)
+		{
+			printf("%s%d:[failed]%s", SET_COLOR_RED, c, RESET_COLOR_RED);
+			error = 1;
+		}
 	}
-	printf("Test succed\n");
+	if (error == 0)
+		printf("%s[OK]%s\n", SET_COLOR_GREEN, RESET_COLOR_GREEN);
 	return (0);
 }

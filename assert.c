@@ -6,7 +6,7 @@
 /*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:56:32 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/08 13:11:59 by natalia          ###   ########.fr       */
+/*   Updated: 2023/11/08 14:28:39 by natalia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	memory_assert(int test_number, int condition)
 	if (!(condition))
 		printf("%s%d:[failed]%s", SET_COLOR_RED, test_number, RESET_COLOR_RED);
 	else
-		printf("%s%d: Memory[OK] %s", SET_COLOR_GREEN, test_number, RESET_COLOR_GREEN);
+		printf("%s%d: M[OK] %s", SET_COLOR_GREEN, test_number, RESET_COLOR_GREEN);
 }
