@@ -1,6 +1,6 @@
 # LIBFT
 
-The project goal is to create my own library.
+The project goal is to create my own library. The project includes a Makefile, a main for each functions and a bash test.
 
 ## Table of Contents
 - [Features](#features)
