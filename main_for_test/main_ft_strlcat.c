@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_strlcat.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:14:28 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:39 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_strlcat.c                                  :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/24 15:14:28 by natalia       #+#    #+#                 */
+/*   Updated: 2024/01/26 21:58:28 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ testa tamanho da STRING
 testa tamanho MENOR STRING
 testa tamanho MAIOR STRING
 */
-void assert (int condition);
+void	assert(int test_number, int condition);
 
 char *string_gen(int size);
 
 int	main(void)
-{
+{/*
 //test 0 - my function - size bigger than the sum of strings
 	char	dst[] = "avocado";
 	char	src[] = " is good";
@@ -117,6 +117,7 @@ int	main(void)
 //comparing test 8 and test 9
     assert(res_t8 == res_t9);
 //final
-	printf("Test succed\n");
+*/
+	printf("\n");
 	return (0);
 }

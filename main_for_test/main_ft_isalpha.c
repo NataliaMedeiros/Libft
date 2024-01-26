@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_isalpha.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 08:22:06 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/08 13:20:33 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_isalpha.c                                  :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/26 08:22:06 by nmedeiro      #+#    #+#                 */
+/*   Updated: 2024/01/26 21:46:15 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	main(void)
 		}
 	}
 	if (error == 0)
-		printf("%s[OK]%s\n", SET_COLOR_GREEN, RESET_COLOR_GREEN);
+		printf("%s0: [OK]%s\n", SET_COLOR_GREEN, RESET_COLOR_GREEN);
 	return (0);
 }

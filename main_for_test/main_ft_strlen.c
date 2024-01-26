@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_strlen.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 15:12:40 by natalia           #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:34 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_strlen.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/24 15:12:40 by natalia       #+#    #+#                 */
+/*   Updated: 2024/01/26 21:39:22 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ int	main(void)
 	test_ft_strlen(3, "");
 	test_ft_strlen(4, "Hello\0World");
 	test_ft_strlen(5, "Hello\nWorld");
-	printf("Test succes\n");
+	printf("\n");
 	return (0);
 }

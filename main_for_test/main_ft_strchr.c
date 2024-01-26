@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_strchr.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 08:23:31 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:54 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_strchr.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/26 08:23:31 by nmedeiro      #+#    #+#                 */
+/*   Updated: 2024/01/26 21:57:58 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "../libft/libft.h"
 
-void assert (int condition);
+void	assert(int test_number, int condition);
 
 int	main(void)
 {
-	char	*s = "abacate";
-	char	ch = 'c';
+	char	*s;
+	char	ch;
 
-    assert(ft_strchr(s, ch) == strchr(s, ch));
-	printf("Succes '%s' is iqual = '%s'\n", ft_strchr(s, ch), strchr(s, ch));
+	s = "abacate";
+	ch = 'c';
+	assert(0, ft_strchr(s, ch) == strchr(s, ch));
 
-    s = "www.ns.nl";
+	s = "www.ns.nl";
 	ch = '.';
 
-    assert(ft_strchr(s, ch) == strchr(s, ch));
-	printf("Succes '%s' is iqual = '%s'\n", ft_strchr(s, ch), strchr(s, ch));
+	assert(1, ft_strchr(s, ch) == strchr(s, ch));
 
-    s = "I love coffee!!!";
+	s = "I love coffee!!!";
 	ch = '.';
 
-    assert(ft_strchr(s, ch) == strchr(s, ch));
-	printf("Succes '%s' is iqual = '%s'\n", ft_strchr(s, ch), strchr(s, ch));
-	printf("Test succed\n");
-    return (0);
+	assert(2, ft_strchr(s, ch) == strchr(s, ch));
+	printf("\n");
+	return (0);
 }

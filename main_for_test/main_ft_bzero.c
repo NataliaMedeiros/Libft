@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_bzero.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 08:14:25 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/08 13:19:49 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_bzero.c                                    :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/26 08:14:25 by nmedeiro      #+#    #+#                 */
+/*   Updated: 2024/01/26 21:43:17 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int	main(void)
 	test_bzero_char(3, t4, sizeof(t3));
 	test_bzero_char(4, t4, sizeof(t4));
 	test_bzero_char(5, t5, sizeof(t5));
+	printf("\n");
 	return (0);
 }

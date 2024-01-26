@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_substr.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 09:24:03 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/02 11:16:21 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_substr.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/23 09:24:03 by nmedeiro      #+#    #+#                 */
+/*   Updated: 2024/01/26 21:59:01 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "../libft/libft.h"
+
+void	assert(int test_number, int condition);
 
 int	main(void)
 {

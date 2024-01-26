@@ -25,8 +25,7 @@ for file in ${INCL_FILES} ; do
 
     if [ -f "main_for_test/main_${FILE_NAME}" ]; then
 
-        echo "__________________________________________________________________________
-        "
+#        echo "__________________________________________________________________________"
         cc  -Wall -Werror -Wextra \
         libft/${FILE_NAME} \
         main_for_test/main_${FILE_NAME} \
@@ -35,16 +34,16 @@ for file in ${INCL_FILES} ; do
         -L. -Llibft -lft \
         -o exec/${FILE_NAME%%.*}
 
-        echo "Compiling file ${BOLD} ${FILE_NAME} ${RESET}"
+#       echo "Compiling file ${BOLD} ${FILE_NAME} ${RESET}"
         if [ $? -eq 0 ]; then
-            echo "Compilation successful for file ${FILE_NAME}. Starting tests"
+            echo "Starting tests for ${FILE_NAME}. "
             ./exec/${FILE_NAME%%.*}
     	else
         	echo "Compilation failed  for file ${FILE_NAME}."
     	fi
 
     else
-       echo "ATENTION: Main not found for ${FILE_NAME} skipping."
+        echo "ATENTION: Main not found for ${FILE_NAME} skipping."
     fi
 
     echo " "

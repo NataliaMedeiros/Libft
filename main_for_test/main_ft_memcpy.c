@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_memcpy.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 08:22:44 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/08 15:42:20 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_memcpy.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/26 08:22:44 by nmedeiro      #+#    #+#                 */
+/*   Updated: 2024/01/26 21:30:35 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int	main(void)
 	test_ft_memcpy(4, string_gen(0), string_gen(5), 0);
 	test_ft_memcpy(5, array, source, len1);
 	test_ft_memcpy(6, string_gen(10), string_gen(5), 16);
+	printf("\n");
 	return (0);
 }

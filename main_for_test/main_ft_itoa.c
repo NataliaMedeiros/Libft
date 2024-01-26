@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main_ft_itoa.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: natalia <natalia@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 08:22:22 by nmedeiro          #+#    #+#             */
-/*   Updated: 2023/11/08 14:32:12 by natalia          ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main_ft_itoa.c                                     :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: natalia <natalia@student.42.fr>              +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/26 08:22:22 by nmedeiro      #+#    #+#                 */
+/*   Updated: 2024/01/26 21:36:51 by natalia       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int	main(void)
 	test_itoa(12, buffer, 1);
 	test_itoa(13, buffer, -1);
 	test_itoa(14, buffer, 42);
+	printf("\n");
 	free(buffer);
 	return (0);
 }
