@@ -1,6 +1,6 @@
-# Your Project Name
+# LIBFT
 
-Short description or introduction to your project.
+The project goal is to create my own library.
 
 ## Table of Contents
 - [Features](#features)
